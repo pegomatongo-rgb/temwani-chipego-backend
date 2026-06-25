@@ -51,7 +51,8 @@ app.post("/send-answer", async (req, res) => {
 
         res.status(500).json({
             success: false,
-            error: error.message
+            message: error.message,
+            stack:error stack
         });
 
     }
