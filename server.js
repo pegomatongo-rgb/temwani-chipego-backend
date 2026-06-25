@@ -34,10 +34,10 @@ app.post("/send-answer", async (req, res) => {
             html: `
                 <h2>New Response ❤️</h2>
                  <p><strong>Question:</strong></p>
-                <p>${question}</p>
+                <p>{question}</p>
 
                 <p><strong>Answer:</strong></p>
-                <p>${answer}</p>
+                <p>{answer}</p>
             `
         });
 
