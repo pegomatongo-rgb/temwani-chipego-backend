@@ -47,7 +47,7 @@ app.post("/send-answer", async (req, res) => {
 
     } catch(error) {
         console.log("EMAIL ERROR:" error.code);
-        console.log("MESSAGE:" error.code);
+        console.log("MESSAGE:" error.message);
 
         return res.status(500).json({
             success: false,
