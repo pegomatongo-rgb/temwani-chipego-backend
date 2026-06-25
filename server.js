@@ -46,7 +46,7 @@ app.post("/send-answer", async (req, res) => {
         });
 
     } catch(error) {
-        console.log("CODE:" error.code);
+        console.log("CODE:" error.code),
         console.log("MESSAGE:" error.message);
 
         return res.status(500).json({
