@@ -28,13 +28,12 @@ app.post("/send-answer", async (req, res) => {
         });
 
         await transporter.sendMail({
-            from: process.env.EMAIL_SENDER,
+            from: "{process.env.EMAIL_SENDER,}" <{process.env.EMAIL_USER}>
             to: process.env.EMAIL_USER,
             subject: "💌 New Answer From Tee",
             html: `
                 <h2>New Response ❤️</h2>
-
-                <p><strong>Question:</strong></p>
+                 <p><strong>Question:</strong></p>
                 <p>${question}</p>
 
                 <p><strong>Answer:</strong></p>
