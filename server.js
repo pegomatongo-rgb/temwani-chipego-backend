@@ -46,12 +46,12 @@ app.post("/send-answer", async (req, res) => {
         });
 
     } catch(error) {
+        console.log("EMAIL ERROR:" error.code);
+        console.log("MESSAGE:" error.code);
 
-        console.error(error);
-
-        res.status(500).json({
+        return res.status(500).json({
             success: false,
-            message: error.message
+            error: error.message
         });
 
     }
