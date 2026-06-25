@@ -28,7 +28,7 @@ app.post("/send-answer", async (req, res) => {
         });
 
         await transporter.sendMail({
-            from:"${process.env.APP_NAME}" <${process.env.EMAIL_USER}>
+            from:"${process.env.APP_NAME}" <{process.env.EMAIL_USER}>
             to: process.env.EMAIL_USER,
             subject: "💌 New Answer From Tee",
             html: `
